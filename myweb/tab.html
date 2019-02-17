@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin:0;
+			padding:0px;
+		}
+		.content{
+			height:300px;
+			width:470px;
+			border:1px solid black;
+		}
+		.box{
+			height:50px;
+		}
+		.box > li{
+			list-style:none;
+			width:92px;
+			float:left;
+			border:1px solid black;
+			height:30px;
+			line-height:30px;
+			text-align:center;
+			cursor: pointer;
+		}	
+		.div2,.div3,.div4{
+			display:none;
+		}
+		</style>
+	
+	</head>
+	<body>
+		<div class="content">
+			<ul class="box">
+				<li class="li1" onmouseover="show(1,this)">国际新闻</li>
+				<li class="li2" onmouseover="show(2,this)">国内新闻</li>
+				<li class="li3" onmouseover="show(3,this)">体育新闻</li>
+				<li class="li4" onmouseover="show(4,this)">娱乐新闻</li>
+				<li class="li5" onmouseover="show()"></li>
+			</ul>
+			<div class="div1">国际新闻</br>
+			人生若只如初见</br>
+			何事秋风悲画扇</br>
+			等闲变却故人心</br>
+			
+			</div>
+			<div class="div2">国内新闻</br>
+			江南皮革厂倒闭了</br>	
+			陈独秀有话说
+			</div>
+			<div class="div3">体育新闻</br>
+				据说林丹深夜掏出一个会发光的球</br>
+				据说小罗小小罗来中国了
+			</div>
+			<div class="div4">娱乐新闻</br>
+			某明星深夜和某男星聊剧本	
+			</div>
+		</div>
+			<script type="text/javascript">
+			
+			function show(n,ele){
+				for(var i=1;i<=4;i++){
+				var allLi=document.getElementsByClassName("li"+i)[0];
+				
+				allLi .style.border="1px solid red";
+				}
+				for(var i=1;i<=4;i++){
+				var allDiv=document.getElementsByClassName("div"+i)[0];
+				
+				allDiv.style.display="none";
+				}
+				var obj=document.getElementsByClassName("div"+n)[0];
+				obj.style.display="block";
+				ele.style.borderBottom="1px solid white";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+
+.basic li,.user li{
+	float:left;
+	height:30px;
+	line-height:30px;
+}
+.icon-shoucang1{
+	height:30px;
+	line-height:30px;
+}
+.icon-shoucang1:hover{
+	color:red;
+}

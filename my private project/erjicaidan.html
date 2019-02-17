@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			li{
+				list-style: none;
+				float:left;
+			}
+			.box>li>ul{
+				display:none;
+			}
+	.box>li>ul>li{
+		float:none;
+	}
+		</style>
+	</head>
+	<body>
+		<ul class="box">
+			<li class="first"><a href="#">a</a>
+			<ul class="hiddeen">
+				<li>A</li>
+				<li>B</li>
+			</ul>	
+			</li>
+			<li>b</li>
+		</ul>
+		<script type="text/javascript">
+		var ul=document.getElementsByClassName("hiddeen")[0];
+		var li=document.getElementsByClassName("first")[0];
+		li.onfocus=function(){
+			ul.style="block";
+		}
+		</script>
+	</body>
+</html>

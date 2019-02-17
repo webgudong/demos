@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			.wrap{
+				position:relative;
+				width:400px;
+				height:400px;
+				margin:0 auto;
+				border:1px solid cadetblue;
+				border-radius:50% ;
+			}
+			.wrap .inner{
+				position:absolute;
+				width:390px;
+				height:390px;
+				top:0;
+				bottom:0;
+				right:0;
+				left:0;
+				margin:auto;
+				border:1px solid cadetblue;
+				border-radius:50% ;
+			}
+			.wrap .inner ul li{
+				position:absolute;
+				margin-left:194px;
+				transform-origin:center 195px  ;
+				list-style:none;
+                width:2px;
+				height:12px;
+				background: black;
+				
+			}
+	.wrap .inner ul li:nth-child(5n+1){
+		height:18px;
+	}
+	.wrap .inner div{
+		position:absolute;
+		
+	}
+	.wrap .inner .hour{
+		left:198px;
+		bottom:200px;
+		width:4px;
+		height:36px;
+		background:blueviolet;
+		transform-origin:center bottom ;
+		
+	}
+	.wrap .inner .minute{
+		left:199px;
+		bottom:200px;
+		width:2px;
+		height:50px;
+		background:darkgray;
+		transform-origin:center bottom ;
+	}
+		.wrap .inner .second{
+			left:198px;
+		    bottom:200px;
+			width:2px;
+			height:80px;
+			background:red;
+			transform-origin:center bottom ;
+		}
+	.wrap .inner .icon{
+		height:20px;
+		width:20px;
+		background: red;
+		border-radius:50% ;
+		left:190px;
+		bottom:190px;
+	}
+		
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="inner">
+			<ul>	
+			</ul>
+			<div class="hour"></div>
+			<div class="minute"></div>
+			<div class="second"></div>
+			<div class="icon"></div>
+		    </div>
+			<script type="text/javascript">
+				var ulNode=document.getElementsByTagName("ul")[0];
+				    var styleNode=document.getElementsByTagName("style")[0];
+				var hour=document.getElementsByClassName("hour")[0];
+				var minute=document.getElementsByClassName("minute")[0];
+				var second=document.getElementsByClassName("second")[0];
+				var icon=document.getElementsByClassName("icon")[0];
+				var cssText='';
+                for(var i=0;i<60;i++){
+                var listNode=document.createElement("li");
+                ulNode.appendChild(listNode);
+                cssText+=".wrap>.inner>ul>li:nth-child("+(i+1)+"){transform:rotate("+(i*6)+"deg);}";
+
+                }
+               styleNode.innerHTML+=cssText;
+               var timer=setInterval(move,1000);
+               move();
+               function move(){
+               	var date=new Date();
+               	var s=date.getSeconds();
+               	var m=date.getMinutes()+s/60;
+               	var h=date.getHours()+m/60;
+
+
+               	hour.style.transform="rotate("+(30*h)+"deg)";
+               	 minute.style.transform="rotate("+(6*m)+"deg)";
+               	second.style.transform="rotate("+(6*s)+"deg)";
+               }
+			</script>
+		</div>
+	</body>
+</html>

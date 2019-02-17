@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding:0;
+				margin:0;
+			}
+			.content{
+				margin:0 auto;
+				width:600px;
+			}
+			ul {
+			float:right;
+			margin-right:10px;	
+			}
+			ul li{
+				list-style:none;
+				height:30px;
+				width:30px;
+				border:1px solid black;
+				margin-top:2px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="content">
+			<img class="tu" src="img/1.png"  onmouseover="stopTu()" onmouseout="startTu()"/>
+			<ul>
+				<li class="li1" onmouseover="bianSe()" onmouseout="startTu()">1</li>
+				<li class="li2" onmouseover="bianSe()" onmouseout="startTu()">2</li>
+				<li class="li3" onmouseover="bianSe()" onmouseout="startTu()">3</li>
+				<li class="li4" onmouseover="bianSe()" onmouseout="startTu()">4</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+		var i=1;
+		var j=0;
+		var list=document.getElementsByTagName("li");
+		var tu=document.getElementsByTagName("img")[0];
+		
+			var timer=setInterval("huanTu()",1000);	
+			function huanTu(){
+			i++;
+			if(i>4){
+				i=1;
+			}
+			tu.src="img/"+i+".png"
+			len=list.length;
+			 	for(j=0;j<len;j++){
+			 		
+			}
+			function stopTu(){
+				clearInterval(timer);
+			}
+			 function startTu(){
+			 	timer=setInterval("huanTu()",1000);	
+			 }
+		
+		</script>
+	</body>
+</html>

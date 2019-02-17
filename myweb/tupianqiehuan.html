@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		
+			div{
+				width:600px;
+				margin:0 auto;
+				border:1px solid red;
+			}
+			ul{
+			float:right;
+			margin-right:20px;	
+			
+			}
+			ul li{
+				list-style:none;
+				border:1px solid red;
+				width:30px;
+				height:30px;
+				text-align:center;
+				line-height:30px;
+				
+				
+			}
+		</style>
+		
+	</head>
+	<body>
+	<div>
+	<img  class="tt" src="img/1.png"/ onmouseover="stopTu()" onmouseout="start()">
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	</div>
+	<script type="text/javascript">
+	var target;
+	var j=0;
+	var n;
+	var ul=document.getElementsByTagName("ul")[0];
+	var list=document.getElementsByTagName("li");
+		var	tu=document.getElementsByClassName('tt')[0];
+		 var i=1;
+		var timer=window.setInterval("huanTu()",1000);
+			
+			
+			function huanTu(){
+				i++;
+				if(i>=5){
+					i=1;
+				}
+	
+				
+				tu.src="img/"+i+".png";
+				console.log(tu.src);
+				for(j=0;j<4;j++){
+					list[j].style.backgroundColor="white";
+				}
+				list[i-1].style.backgroundColor="#f40";
+			}
+		 function stopTu(){
+				clearInterval(timer);
+			}
+		 function start(){
+		 	timer=window.setInterval("huanTu()",1000);
+		 }
+		 ul.onmouseover=function(e){
+		 	var event=e||window.event;
+		  target=event.target||event.srcElement;
+		 	var n=target.innerHTML;
+		 	tu.src="img/"+n+".png";
+		 	stopTu();
+		 	i=n;
+		 	target.style.backgroundColor="#f40"
+		 	
+		 }
+		 ul.onmouseout=function(e){
+		 
+		 	var event=e||window.event;
+		 	var target=event.target||event.srcElement;
+		 	timer=window.setInterval("huanTu()",1000);
+		 	target.style.backgroundColor="white";
+		 }
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+			#div{
+				width:100px;
+				height:100px;
+				background-color:#f40 ;
+				position:absolute;
+				left:0;
+				top:0;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var disX,disY;
+			
+				var div=document.getElementById("div");
+				document.onmousedown=function(e){
+					e=e ||window.event;
+					
+					disX=document.body.scrollLeft ||document.documentElement.scrollLeft;
+					disY=document.body.scrollTop ||document.documentElement.scrollTop;
+					
+				
+				document.onmousemove=function(e){
+					console.log("hh");;
+					e=e ||window.event;
+					var left=e.clientX;
+					var top=e.clientY;
+					div.style.left=left+disX+"px";
+					div.style.top=top+disY+"px";
+				}
+				document.onmouseup=function(){
+				document.onmousemove=null;
+				document.onmouseup=null;
+				}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div"></div>
+	</body>
+</html>

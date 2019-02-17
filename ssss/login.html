@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		body,html{
+		
+			background-color:lightblue ;
+		}
+			.login{
+				
+				width:30%;
+				height:500px;
+				margin:0 auto;
+				
+				background-image: url(img/bg.png)  ;
+				background-size: cover;
+			
+			}
+			.login h1{
+				text-align: center;
+				color:rgba(20,230,19);
+			}
+			.login form span{
+				margin-left:112px ;
+				font-size:19px; ;
+				font-family: "微软雅黑";
+				color:greenyellow;
+			}
+			.login input{
+		    margin:0 auto;
+			border:none;
+			outline:medium;
+			border-bottom:1px solid grey;
+			width: 300px;
+            display: block;
+            height: 36px;
+            background-color:transparent ;
+			}
+			.login form .submit{
+				width:100px;
+				height:36px;
+				font-size: 22px;
+				font-family: "微软雅黑";
+				color:yellowgreen;
+			}
+	
+		</style>
+	</head>
+	<body>
+		<div class="login">
+			<h1>Welcome</h1>
+			<form action="" method="post">
+		    <span><label for="name">FULL NAME</label></span><br/>
+			<input type="text" name="username" id="name"  placeholder="Enter your fullname"/><br />
+			<span><label for="password">PASSWORD</label></span><br/>
+			<input type="text" name="username" id="password"  placeholder="Enter your password"/><br />
+			<span><label for="email">EMAIL</label></span><br/>
+			<input type="text" name="email" id="email"  placeholder="your email goes here"/><br />
+			<input type="submit" class="submit" value="Sign Up"/>
+		</form>
+		</div>
+	</body>
+</html>

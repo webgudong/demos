@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			span{
+				font-size:65px;
+				color:red;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=init;
+			var span;
+			function init(){
+				span=document.getElementsByTagName("span")[0];
+				setInterval("diJian()",1000);
+				setTimeout("tiaoZhuan()",5000);
+			}
+			function tiaoZhuan(){
+				//location.assign("http://www.baidu.com");
+			}
+			function diJian(){
+			span.innerHTML--;
+				
+			}
+		</script>
+	</head>
+	<body>
+		页面在<span>5</span>秒后跳转
+		
+	</body>
+</html>

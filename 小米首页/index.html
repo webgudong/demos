@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			/*box-sizing: border-box;*/
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.clearFlex::before{
+			display: block;
+			content:'' ;
+			clear: both;
+			overflow: hidden;
+		}
+		/*头部图片*/
+			.sit-bn-bar{
+				width:100%;
+				background-image:url(img/bar.jpg) ;
+				background-repeat: no-repeat;
+				background-position:center 0 ;
+				height:120px;
+			}
+			.sit-bn-bar a{
+				display: block;
+				width:100%;
+				height:120px;
+			}
+			/*头部导航*/
+			.site-topbar{
+				width:100%;
+				height:40px;
+				color:#B0B0B0;
+				font-size:12px ;
+				background-color:#333 ;
+			}
+			.content{
+				width:1226px;
+				height:100%;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			.topbar-nav{
+				float:left;
+				line-height: 40px;;
+			}
+			.topbar-info,.topbar-cart{
+				float:right;
+				line-height:40px ;
+			}
+			.content a{
+				color:#b0b0b0;
+			}
+			.content span{
+				margin:0 .5em;
+			}
+			.topbar-cart{
+				width:120px;
+				margin-left:15px;
+			}
+			.topbar-cart .cart-mini{
+				display: block;
+				text-align: center;
+				height:40px;
+				line-height:40px;
+				background-color:#424242;
+			}
+			.topbar-cart .cart-mini:hover{
+			   color: #ff6700;
+               background: #fff;
+			}
+			.cart-mini i{
+				margin-right: 4px;
+                font-size: 20px;
+                line-height: 20px;
+                vertical-align: -4px;
+			}
+			/*中间头部*/
+			.heaer-logo,.header-nav{
+				float:left;
+			}
+			.header-search{
+				float:right;
+			}
+			.site-header{
+				width:100%;
+				height:100px;
+				
+			}
+			.container{
+				width:1226px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			.heaer-logo{
+				width:62px;
+				margin-top:22px;
+			}
+			.header-nav{
+				width:850px;
+			}
+			.heaer-logo .logo{
+				width:55px;
+				height:55px;
+				overflow: hidden;
+				display: block;
+				background-color:#FF6700;
+				background-image: url(img/logo.png);
+				background-repeat: no-repeat;
+				background-position:center ;
+			}
+			.nav-list .nav-item{
+				float:left;
+			}
+			.nav-list{
+				width:820px;
+				height:88px;
+				font-size:16px;
+				padding:12px 0 0 30px;
+			}
+			.first-item{
+				margin-left:127px;
+			}
+			.nav-item a{
+				color:#333;
+				display: block;
+				padding:26px 10px 38px;
+			}
+			.nav-item a:hover{
+				color:#FF6700;
+			}
+			.header-search{
+				position: relative;
+				width:296px;
+				margin-top:25px;
+			}
+			.header-search .serch-form{
+				width:296px;
+				height:50px;
+			}
+			.hide{
+				display: none !important;
+			}
+			.header-search .search-text{
+				position:absolute;
+				top:0;
+				right:51px;
+				width: 223px;
+                height: 48px;
+                padding:0 10px;
+			}
+			.search-btn{
+				position:absolute;
+				right:0;
+				top:0;
+				width:52px;
+				height:48px;
+				line-height:24px;
+				font-size:24px;
+				background:#fff;
+				color:#616161;
+				outline:none ;
+				border:1px solid #e0e0e0;
+				background-image:url(img/sou-suo.png) ;
+				background-repeat: no-repeat;
+				background-position:center ;
+				background-size:30px ;
+				
+			}
+			.search-hotword{
+				position: absolute;
+                top: 14px;
+                right: 62px;
+			}
+			.search-hotword a{
+				margin-left:5px;
+				padding:0 5px;
+				font-size:12px;
+				background-color:#eee;
+				color:#757575;
+			}
+			/*中间部分 一级导航*/
+			.home-hero-container{
+				position: relative;
+				opacity:.7 ;
+				height:460px;
+			}
+			/*轮播图*/
+			.banner{
+				position: relative;
+				width:1226px;
+				height:460px;
+				/*background-color:blue;*/
+			}
+			.banner .img-wrap a{
+				display:none;
+				position:absolute;
+				width:1226px;
+				height:460px;
+			}
+			.banner .btn-list{
+				position:absolute;
+				width:110px;
+				height:20px;
+				right:30px;
+				bottom:20px;
+				/*background-color: red;*/
+			}
+			.btn-list .btn{
+				float:left;
+				width:6px;
+				height:6px;
+				background:#7c7c7c;
+				border-radius:50%;
+				border:2px solid #c6c6c6;
+				margin-right:8px;
+				cursor:pointer;
+			}
+			.btn-list .active{
+				background-color:#e7e7e7;
+				border-color:#787878;
+			}
+			.tab{
+				position:absolute;
+				top:190px;
+				width:41px;
+				height:69px;
+				background-image:url("img/icon-slides.png")
+			}
+			.tab-left{
+				left:235px;
+				background-position-x:83px ;
+			}
+			.tab-left:hover{
+				background-position-x:0px ;
+			}
+			.tab-right{
+				right:0px;
+				background-position-x:-125px ;
+			}
+			.tab-right:hover{
+				background-position-x:-41px;
+			}
+			.home-hero-slider{
+				position:absolute;
+				width:236px;
+				height:420px;
+				background:rgba(0,0,0,.6);
+				padding:20px 0;
+				z-index: 1;
+			}
+			.slider-list{
+				position:absolute;
+				height:420px;
+				
+			}
+			.slider-list .slider-item{
+				/*position:relative;*/
+				width:236px;
+				height:42px;
+			}
+			.slider-list .slider-item:hover{
+				background:#f90;
+			}
+			.slider-list .slider-item:hover .show-item{
+				display: block;
+			}
+		  .slider-list .slider-item a{
+		  	position:relative;
+		  	display:block;
+		  	width:206px;
+			height:42px;
+		  	padding-left: 30px;
+		  	line-height:42px ;
+		  	color:#fff;
+		  	font-size:14px;
+		  	
+		  }
+		  .icon-arrow-right{
+		  	position:absolute;
+		  	font-size:14px;
+		  	top:1px;
+		  	right:56px;
+		  	color:rgba(255,255,255,0.5);
+		  }
+		  /*二级导航*/
+		 .show-item{
+		 	display:none;
+		 	position:absolute;
+		 	height:460px;
+		 	width:500px;
+		 	top:-20px;
+		 	left:236px;
+		 	background:#fff;
+		 	box-shadow:0 1px 1px #c5c5c5;
+		 	}
+		 .shop-item{
+		 	position: absolute;/*相对于show-wrap定位，但是show-wrap有absolute就不用在加relative了*/
+		 	width:265px;
+		 	height:76px;
+		 	line-height:76px;
+		 	}
+		.item-wrap .shop-item img{
+			width:40px;
+			height:40px;
+			vertical-align: middle;
+			padding:0 20px 0 16px;
+		}
+		</style>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--头部广告-->
+			<div class="sit-bn-bar">
+			<a href="javascript:;"></a>
+		</div>
+		<!--头部导航-->
+		<div class="site-topbar">
+			<div class="content">
+				<div class="topbar-nav">
+				<a href="javascript:;">小米商城</a>
+				<span>|</span>
+				<a href="javascript:;">MIUI</a>
+				<span>|</span>
+				<a href="javascript:;">loT</a>
+				<span>|</span>
+				<a href="javascript:;">云服务</a>
+				<span>|</span>
+				<a href="javascript:;">金融</a>
+				<span>|</span>
+				<a href="javascript:;">有品</a>
+				<span>|</span>
+				<a href="javascript:;">小爱开放平台</a>
+				<span>|</span>
+				<a href="javascript:;">政企服务</a>
+				<span>|</span>
+				<a href="javascript:;">Select Region</a>
+				
+			</div>
+			<div class="topbar-cart">
+				<a  class="cart-mini" href="javascript:;">
+					<i class="iconfont icon-gouwuchekong" ></i>
+					<span>购物车(0)</span>
+				</a>
+			</div>
+			<div class="topbar-info">
+				<a href="javascript:;">登录</a>
+				<span>|</span>
+				<a href="javascript:;">注册</a>
+				<span>|</span>
+				<a href="javascript:;">消息通知</a>
+				
+			</div>
+			</div>
+		</div>
+		<!--中间头部-->
+		<div class="site-header">
+			<div class="container">
+				<div class="heaer-logo">
+					<a  class="logo" href="javascript:;">
+					</a>
+				</div>
+				<div class="header-nav">
+					<ul class="nav-list clearFlex">
+						<li class="nav-item first-item"><a href="javascript:;">小米手机</a></li>
+						<li class="nav-item"><a href="javascript:;">红米</a></li>
+						<li class="nav-item"><a href="javascript:;">电视</a></li>
+						<li class="nav-item"><a href="javascript:;">笔记本</a></li>
+						<li class="nav-item"><a href="javascript:;">空调</a></li>
+						<li class="nav-item"><a href="javascript:;">新品</a></li>
+						<li class="nav-item"><a href="javascript:;">路由器</a></li>
+						<li class="nav-item"><a href="javascript:;">智能硬件</a></li>
+						<li class="nav-item"><a href="javascript:;">服务</a></li>
+						<li class="nav-item"><a href="javascript:;">社区</a></li>
+					</ul>	
+				</div>
+				<div class="header-search">
+				<form class="serch-form">
+					<label for="search" class="hide">站内搜索</label>
+					<input type="search" class="search-text" id="search" name="keyword">
+						<input type="submit" class="search-btn" value=""/>
+						<div class="search-hotword">
+							<a href="javascript:;">小米8</a>
+							<a href="javascript:;">小米MIX 2S</a>
+						</div>
+				</form>
+			</div>
+			</div>
+		</div>
+        <div class="home-hero-container container">
+        	<div class="home-hero-slider">
+        	<ul class="slider-list">
+        		<li class="slider-item">
+        			<a href="javascript:;">手机 电话卡<i class="iconfont icon-arrow-right"></i></a>
+        			<!--二级导航-->
+        			<div class="show-item">
+        				<ul class="item-wrap">
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/xiaomi1.jpg" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/xiaomi1.jpg" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/xiaomi1.jpg" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/xiaomi1.jpg" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        				</ul>
+        			</div>
+        		
+        		</li>
+        		<li class="slider-item">
+        			<a href="javascript:;"> 电视 盒子<i class="iconfont icon-arrow-right"></i></a>
+        			<div class="show-item">
+        				<ul class="item-wrap">
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/xiaomi1.jpg" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/xiaomi1.jpg" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/xiaomi1.jpg" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/xiaomi1.jpg" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        					<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        						<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        						<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        						<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        						<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        						<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        						<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        						<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        						<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        						<li class="shop-item">
+        						<img src="img/mix3-80.png" alt="" />小米MIX3-80</li>
+        				</ul>
+        			</div>
+        		</li>
+        		<li class="slider-item">
+        			<a href="javascript:;"> 笔记本 电脑<i class="iconfont icon-arrow-right"></i></a>
+        		    <div class="show-item">3</div>
+        		</li>
+        		<li class="slider-item">
+        			<a href="javascript:;"> 家电 插线板<i class="iconfont icon-arrow-right"></i></a>
+        		    <div class="show-item">4</div>
+        		</li>
+        		<li class="slider-item">
+        			<a href="javascript:;"> 出行 穿戴<i class="iconfont icon-arrow-right"></i></a>
+        		    <div class="show-item">5</div>
+        		</li>
+        		<li class="slider-item">
+        			<a href="javascript:;">智能 路由器<i class="iconfont icon-arrow-right"></i></a>
+        		    <div class="show-item">6</div>
+        		</li>
+        		<li class="slider-item">
+        			<a href="javascript:;">电源 配件<i class="iconfont icon-arrow-right"></i></a>
+        		    <div class="show-item">7</div>
+        		</li>
+        		<li class="slider-item">
+        			<a href="javascript:;">健康 儿童<i class="iconfont icon-arrow-right"></i></a>
+        		    <div class="show-item">8</div>
+        		</li>
+        		<li class="slider-item">
+        			<a href="javascript:;">耳机 音响<i class="iconfont icon-arrow-right"></i></a>
+        		    <div class="show-item">9</div>
+        		</li>
+        		<li class="slider-item">
+        			<a href="javascript:;">生活 箱包<i class="iconfont icon-arrow-right"></i></a>
+        		    <div class="show-item">10</div>
+        		</li>
+        	</ul>
+        	</div>
+            <!--轮播图-->
+            <div class="banner">
+            	<div class="img-wrap">
+            	<a href=""style="display:block;"><img src="img/1.jpg" alt="" width="1226px" height="460px"/></a>
+            	<a href=""><img src="img/2.jpg" alt="" width="1226px" height="460px"/></a>
+            	<a href=""><img src="img/3.jpg" alt="" width="1226px" height="460px"/></a>
+            	<a href=""><img src="img/4.jpg" alt="" width="1226px" height="460px"/></a>
+            	<a href=""><img src="img/5.jpg" alt="" width="1226px" height="460px"/></a>
+            	</div>
+            	<div class="btn-list">
+            		<div class="btn"></div>
+            		<div class="btn"></div>
+            		<div class="btn"></div>
+            		<div class="btn"></div>
+            		<div class="btn"></div>
+            	</div>
+            	<div class="tab-left tab"></div>
+            	<div class="tab-right tab"></div>
+            	
+            </div>
+        </div>
+		</div>
+		<script type="text/javascript">
+		var show_items=$(".show-item");
+			$.each(show_items, function(index,value) {
+			var oli=$(this).find(".shop-item");
+			var height=oli.height();//保存li的高度；
+			var width=oli.width();
+			var len=oli.length;//获取每个容器内的li的个数
+			var col=Math.ceil(len/6);//向上取整 求列数
+			$(this).width(col*width);
+			oli.each(function(i,value){
+				var x=Math.floor(i/6);//一列放六个，i<6 x=1 width=1*width
+				var y=i%6;
+				$(this).css({
+					left:x*width+"px",
+					top:y*height+"px"
+				})
+			})
+			});
+//			轮播图
+            var index=0;
+            $(".btn").click(function(){
+            	index=$(this).index();
+            	$(this).addClass("active").siblings().removeClass("active");
+            	console.log(index);
+                $(".banner .img-wrap a").eq(index).fadeIn().siblings().fadeOut();
+            })
+            $(".tab-left").click(function(){
+            	index--;
+            	if(index<0){
+            		index=4;
+            	}
+            	$(".banner .img-wrap a").eq(index).fadeIn().siblings().fadeOut();
+            	$(".btn").eq(index).addClass("active").siblings().removeClass("active");
+            	
+            	
+            })
+            $(".tab-right").click(function(){
+            	index++;
+            	if(index>4){
+            		index=0;
+            	}
+            	$(".banner .img-wrap a").eq(index).fadeIn().siblings().fadeOut();
+            	$(".btn").eq(index).addClass("active").siblings().removeClass("active");
+            })
+            var timer = setInterval(function(){
+            	index++;
+            	
+            	$(".banner .img-wrap a").eq(index).fadeIn().siblings().fadeOut();
+            	$(".btn").eq(index).addClass("active").siblings().removeClass("active");
+           
+            },2000)
+		</script>
+	</body>
+</html>

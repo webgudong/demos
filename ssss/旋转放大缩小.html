@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		body{
+			background:pink ;
+		}
+			#test{
+				position:absolute;
+				height:400px;
+				width:400px;
+		background-color:white;
+		
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		margin:auto;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="test" >
+			
+		</canvas>
+		<script type="text/javascript">
+		var flag=0
+			var cavs=document.getElementById("test");
+			if(cavs.getContext){
+				var ctx=cavs.getContext("2d");
+			ctx.fillStyle="black";
+			ctx.translate(200,200);
+			ctx.beginPath();
+			ctx.fillRect(0,0,100,100);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin:0;
+			padding:0;
+		}	
+		.run{
+			background-color:#f40;
+			height:100px;
+			width:100px;
+			
+		}
+		</style>
+	</head>
+	
+	<body>
+	<div class="run" style="position: absolute;">
+	</div>
+	<script>
+	var speed=10;
+	var div=document.getElementsByTagName('div')[0];
+	function getStyle(elem,prop){
+		if(window.getComputedStyle){
+			return window.getComputedStyle(elem,null)[prop];
+		}else{
+			return elem.currentStyle[prop];
+		}
+	}
+	
+	setInterval(function(){
+		speed+=7;
+		div.style.left=parseInt(getStyle(div,'left'))+speed+'px';
+	},100);
+	
+	</script>
+	</body>
+</html>

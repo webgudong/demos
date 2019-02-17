@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				margin-top:200px;
+				width:1000px;
+				height:200px;
+				border:1px solid black;
+				color:white;
+				background-color: red;
+				cursor:crosshair;
+			}
+		</style>
+		<script type="text/javascript">
+	
+		window.onload=function(){
+		
+			//一定写成全局
+			 div=document.getElementsByClassName("div")[0];
+			 //函数一定写在调用前
+			 var fn=function(e){
+			 	e=e ||window.event;
+				var x=event.clientX;
+				var y=event.clientY;
+				div.innerHTML="坐标"+x+","+y;
+			}
+			div.addEventListener("mousemove",fn,false);
+			
+
+		}
+			
+		</script>
+	</head>
+	<body>
+		<div class="div" >
+			坐标0,0
+		</div>
+		
+		
+		
+		
+	</body>
+</html>

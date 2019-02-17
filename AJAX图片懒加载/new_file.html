@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+ //将如下程序补充完整，模拟实现一个与JavaScript数组功能相同的字符串map方法。
+
+//function map(string, callback) {
+//var len=string.length;
+//var result=[];
+//for(var i=0;i<len;i++){
+//	item=string[i];
+//	index= i;
+//	var sum=callback(item,index);
+//	result.push(sum);
+//	
+//	
+//}
+//result = result.join('');
+//return result;
+//
+//}
+//
+//map('abcdefg', (item, index) => {
+//
+//return item + index;
+//
+//});
+//设计一个函数foo输出字符串中所有相邻字母相同的子字符串，如aacdccfttt，输出aa,cc,ttt。
+
+function foo(string) {
+var obj = {};
+var arr=[];
+var len = string.length;
+for(var i = 0; i < len; i++){
+	var v = string.charAt(i);
+	if(obj[v] && obj[v].value == v){
+		obj[v].count = ++obj[v].count;
+	}else{
+		obj[v] = {};
+		obj[v].count = 1;
+		obj[v].value = v; 
+	}
+}
+for(var prop in obj){
+	var count = obj[prop].count;
+	for(var i = 0;i<count;i++){
+		if(count>1){
+	     arr.push(prop);
+		}
+	}
+}
+
+  return arr;
+
+}
+
+foo('aacdccfttt');
+
+		</script>
+	</body>
+</html>

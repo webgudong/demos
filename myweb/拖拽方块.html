@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+			#div{
+				width:100px;
+				height:100px;
+				background-color:#f40 ;
+				position:absolute;
+				left:0;
+				top:0;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="div"style="width:200px;height:200px;background-color:blue;position:absolute;left:0;top:0;"></div>
+		<script type="text/javascript">
+			
+				var disX,disY;
+			
+				var div=document.getElementById("div");
+				document.onmousedown=function(e){
+					e=e ||window.event;
+					disX=e.pageX-parseInt(div.style.left);
+					disY=e.pageY-parseInt(div.style.top);
+//					disX=document.body.scrollLeft ||document.documentElement.scrollLeft;
+//					disY=document.body.scrollTop ||document.documentElement.scrollTop;
+					
+				
+				document.onmousemove=function(e){
+//					console.log("hh");;
+				    e=e ||window.event;
+//					var left=e.clientX;
+//					var top=e.clientY;
+//					div.style.left=left+disX+"px";
+//					div.style.top=top+disY+"px";
+               div.style.left=e.pageX-disX+"px";
+               div.style.top=e.pageY-disY+"px";
+//     console.log(div.style.left);
+				}
+				document.onmouseup=function(){
+				document.onmousemove=null;
+				document.onmouseup=null;
+				}
+				}
+			
+		</script>
+	</body>
+</html>

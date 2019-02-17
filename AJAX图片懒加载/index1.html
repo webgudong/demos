@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0
+			}
+			.wrap{
+				width:400px;
+				background:red ;
+				
+			}
+			.wrap img{
+				width:100px;
+				height:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			
+		</div>
+		<script type="text/javascript">
+			var wrap=document.getElementsByClassName("wrap")[0];
+			function LoadImag(){
+				
+			}
+			LoadImag.prototype={
+				init:function(){
+					var imgNode=documment.createElement("img");
+					wrap.appendChild(imgNode);
+					return {
+						setSrc:function(src){
+							imgNode.src=src;
+						}
+					}
+				},
+				proxy:function(){
+					var img=new Image();
+					img.onload=function(){
+						init.setSrc(this.src);
+					}
+					return {
+						setSrc:function(src){
+						init.setSrc(timg.jpg);
+						img.src=src;
+						}
+					}
+				}
+			}
+			var loadImag=new LoadImag();
+			var proxy=loadImag.proxy();
+			proxy.setSrc("doubanapp5.png");
+		</script>
+	</body>
+</html>
